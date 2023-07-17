@@ -49,13 +49,18 @@ poker_start
 #calculate the mean of the selected vectors
 mean(poker_start)
 
+#selection vector to know winnings
+selection_vector <- poker_vector > 0
 
+#selection vector to show days with amount won
+poker_winning_days <- poker_vector[selection_vector]
+poker_winning_days
 
+selection_vector_roulette <- roulette_vector > 0
+selection_vector_roulette
 
-
-
-
-
+roulette_winning_days <- roulette_vector[selection_vector_roulette]
+roulette_winning_days
 
 
 
