@@ -62,6 +62,72 @@ selection_vector_roulette
 roulette_winning_days <- roulette_vector[selection_vector_roulette]
 roulette_winning_days
 
+#matrix
+matrix(1:27, nrow = 9, byrow = FALSE)
+
+# Box office Star Wars (in millions!)
+new_hope <- c(460.998, 314.4)
+empire_strikes <- c(290.475, 247.900)
+return_jedi <- c(309.306, 165.8)
+
+box_office <- c(new_hope, empire_strikes, return_jedi)
+box_office
+
+#constructing a matrix with the movies
+star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE)
+star_wars_matrix
+
+# Vectors region and titles, used for naming
+region <- c("US", "non-US")
+titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
+
+#naming the rows and columns of the matrix
+rownames(star_wars_matrix) <- titles <- c("A New Hope",
+  "The Empire Strikes Back", "Return of the Jedi")
+colnames(star_wars_matrix) <- region <- c("US", "non-US")
+
+star_wars_matrix
+
+#arithmetic on matrix summing the rows
+worldwide_vector <- rowSums(star_wars_matrix)
+worldwide_vector
+
+#adding columns to matrices using the cbind function
+all_wars_matric <- cbind(star_wars_matrix, worldwide_vector)
+all_wars_matric
+
+# construct the second matrix of movies
+Phantom_Menace <- c(474.5, 552.5)
+Attack_of_the_Clones <- c(310.7, 338.7)
+Revenge_of_the_Sith <- c(380.3, 468.5)
+
+# Create box_office2
+box_office2 <- c(Phantom_Menace, Attack_of_the_Clones, Revenge_of_the_Sith)
+
+# Construct star_wars_matrix2
+star_wars_matrix2 <- matrix(box_office2, nrow = 3, byrow = TRUE)
+
+# Vectors region and titles, used for naming
+region <- c("US", "non-US")
+titles <- c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith")
+
+# Name the columns with region
+colnames(star_wars_matrix2) <- region
+
+# Name the rows with titles
+rownames(star_wars_matrix2) <- titles
+
+star_wars_matrix2
+
+#using rbind to combine starwarsmatrix1 and starwarsmatrix2 
+all_wars_matric <- rbind(star_wars_matrix, star_wars_matrix2)
+
+#summing the matrices
+total_revenue_vector <- colSums(all_wars_matric)
+total_revenue_vector
+
+
+
 
 
 
