@@ -49,10 +49,11 @@ poker_start
 #calculate the mean of the selected vectors
 mean(poker_start)
 
-#selection vector to know winnings
+#selection vector to know winnings. the result are days showing boolean values of winnings
 selection_vector <- poker_vector > 0
+selection_vector
 
-#selection vector to show days with amount won
+#selection vector to show days with amount won by subsetting the selection vector
 poker_winning_days <- poker_vector[selection_vector]
 poker_winning_days
 
@@ -61,6 +62,8 @@ selection_vector_roulette
 
 roulette_winning_days <- roulette_vector[selection_vector_roulette]
 roulette_winning_days
+#useful to select a vector based on meeting certain conditions
+
 
 #matrix
 matrix(1:27, nrow = 9, byrow = FALSE)
@@ -106,6 +109,8 @@ box_office2 <- c(Phantom_Menace, Attack_of_the_Clones, Revenge_of_the_Sith)
 
 # Construct star_wars_matrix2
 star_wars_matrix2 <- matrix(box_office2, nrow = 3, byrow = TRUE)
+star_wars_matrix2
+
 
 # Vectors region and titles, used for naming
 region <- c("US", "non-US")
@@ -121,13 +126,14 @@ star_wars_matrix2
 
 #using rbind to combine starwarsmatrix1 and starwarsmatrix2 
 all_wars_matric <- rbind(star_wars_matrix, star_wars_matrix2)
+all_wars_matric
 
 #summing the matrices
 total_revenue_vector <- colSums(all_wars_matric)
 total_revenue_vector
 
 
-
+#selection of matrix elements
 
 
 
