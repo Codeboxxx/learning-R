@@ -134,7 +134,9 @@ total_revenue_vector
 
 
 #selection of matrix elements
-
+#selecting matrices are 2 dimensional and separated by a comma ","
+#everything on the left before the comma belongs to the rows
+#everything on the right after the comma belongs to the columns
 
 
 
