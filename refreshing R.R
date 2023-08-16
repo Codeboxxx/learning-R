@@ -266,10 +266,23 @@ summary(factor_speed_vector)
 compare_them <- factor_speed_vector[2]>factor_speed_vector[5]
 compare_them
 
+#dDATA FRAMES
+#head() and tail() helps to view top and bottom of the data
+#str() helps gives you an overview of the entire data 
+#creating data frames with the data.frame() function
 
+planets <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune");
+type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883); 
+rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67);
+rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
 
-
-
+planet_df <- data.frame(planets,type,diameter,rotation,rings)
+planet_df
+#to observe the first 5 observations of the data frame
+head(planet_df,5)
+#observe the structure with the str() function 
+str(planet_df)
 
 
 
