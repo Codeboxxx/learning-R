@@ -138,5 +138,116 @@ total_revenue_vector
 #everything on the left before the comma belongs to the rows
 #everything on the right after the comma belongs to the columns
 
+all_wars_matric
+#selecting all the data in the non us category and daving them to non us
+non_us_all <- all_wars_matric[,2]
+non_us_all
+
+#using mean() to calculate the average on non us all
+mean(non_us_all)
+
+#selecting the 1 and 2nd data from the non us column in the all wars matric
+#taking the data in the 1st and 2nd row and 2nd column
+non_us_some <- all_wars_matric[1:2,2]
+non_us_some
+
+#calculate the mean
+mean(non_us_some)
+
+#arithmetic in matrices 
+#knowing the number of visitors in the all wars matrix
+#ticket is $5 
+all_wars_matric
+visitors <- all_wars_matric / 5
+visitors
+
+# Box office Star Wars: In Millions (!) 
+# Construct matrix 
+box_office_all <- c(461, 314.4, 290.5, 247.9, 309.3, 165.8)
+
+movie_names <- c("A New Hope","The Empire Strikes Back","Return of the Jedi")
+
+col_titles <- c("US","non-US")
+
+star_wars_matrix <- matrix(box_office_all, nrow = 3, byrow = TRUE, dimnames = list(movie_names, col_titles))
+star_wars_matrix
+
+ticket_prices_matrix <- matrix(c(5, 5, 6, 6, 7, 7), nrow = 3, byrow = TRUE, dimnames = list(movie_names, col_titles)) 
+ticket_prices_matrix
+
+#calculate the average number of us and non us visitors in star wars matrix using the ticket prices matrix
+#calculate the average us visitors 
+USrevenue <- star_wars_matrix[1:3,1]
+USticketprices <- ticket_prices_matrix[1:3,1]
+USrevenue
+USticketprices
+
+USvisitors <- USrevenue / USticketprices
+USvisitors
+averageUSvisitors <- mean(USvisitors)
+averageUSvisitors
+
+#for average non us visitors
+nonUSrevenue <- star_wars_matrix[1:3,2]
+NONUSticketprices <- ticket_prices_matrix[1:3,2]
+
+averageNONUSvisitors <- mean(nonUSrevenue/NONUSticketprices)
+averageNONUSvisitors
+
+#another way
+visitors2 <- star_wars_matrix/ticket_prices_matrix
+visitors2
+
+average_us_visitors <- mean(visitors2[,1])
+average_nonus_visitors <- mean(visitors2[,2])
+average_us_visitors
+average_nonus_visitors
+
+#factors
+#storing categorical variables using factor() function
+#male, female,male,male etc there are only two factors levels here or categories that is male and female
+
+gender_vector <- c("male", "female", "male", "male", "female")
+#factor function encodes the vector into 2 factors and their levels
+factor_gender_vector <- factor(gender_vector)
+factor_gender_vector
+
+#ordinal variable has natural ordering, nominal variable has no implied order
+#you may want to change the name of factors sometimes using the function levels() to may be change the name to imply an order
+#by default R orders levels alphabetically
+#to change name of the vector as well, we use the C() and assign the names in the ("") and assign it to the level vector output and print
+
+survey_vector <- c("M", "F", "F", "M", "M")
+#convert the vector into a factor vector
+factor_survey_vector <- factor(survey_vector)
+factor_survey_vector
+
+#to change level names
+levels(factor_survey_vector) <- c("Female", "Male")
+factor_survey_vector
+
+#creating a factor vector for the survey called factor_survey_vector_inv
+#and then changing the level names in order of Male and Female
+factor_survey_vector_inv <- factor(survey_vector)
+levels(factor_survey_vector_inv) <- c("Male", "Female")
+factor_survey_vector_inv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
