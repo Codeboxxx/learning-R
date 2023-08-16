@@ -242,6 +242,29 @@ factor_survey_vector_inv
 
 
 
+survey_vector
+
+#summarizing factors using the summary() function
+#summarizing factorized vectors make more sense in analysis than non factorized vectors
+#printing out survey_vector and the factor_survey_vector to see the difference and which is more useful
+
+summary(survey_vector)
+summary(factor_survey_vector)
+
+#ordered factors using the function Factor() with additional arguments Ordered=TRUE and Levels
+#this is mostly used for ordinal variables and orders the vector according to the level
+#levels= c("level1", "level2"...)
+
+speed_vector <- c("fast", "slow", "slow", "fast", "very fast")
+speed_vector
+#to factor the vector
+factor_speed_vector <- factor(speed_vector, ordered = TRUE, levels = c("slow","fast","very fast"))
+factor_speed_vector
+#to check the summary of the factored speed vector
+summary(factor_speed_vector)
+#now we can compare the elements in the factored speed vector because they are ordered now
+compare_them <- factor_speed_vector[2]>factor_speed_vector[5]
+compare_them
 
 
 
