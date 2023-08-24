@@ -284,6 +284,31 @@ head(planet_df,5)
 #observe the structure with the str() function 
 str(planet_df)
 
+#selection of data frame elements using the [] brackets
+#my_df[1:3,2:4] selects rows 1 to 3 and columns 2 to 4
+#my_df[1,] selects all the elements of the first row
+#from planets data frame, select the diameter of mercury 
+planet_df[1,3]
+
+#select all data on Mars
+planet_df[4,]
+
+#we can also use column names to select columns instead of their indices
+#To select the diameter of all the planets. Remember the ("")
+planet_df[1:5, "diameter"]
+
+#we can use the 3 other ways to select all elements in the diameter column of the planets 
+planet_df[,3]
+planet_df[, "diameter"]
+planet_df$diameter
+
+#conditional selections
+
+
+
+
+
+
 
 
 
