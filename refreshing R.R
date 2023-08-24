@@ -302,10 +302,16 @@ planet_df[,3]
 planet_df[, "diameter"]
 planet_df$diameter
 
+planet_df
+
 #conditional selections
+#selecting all rows that have Rings column = to TRUE
+planet_df[rings==TRUE,]
 
-
-
+#another way to do this by using subset function
+subset(planet_df, subset = rings)
+#or
+subset(planet_df, subset = rings==TRUE)
 
 
 
