@@ -232,16 +232,6 @@ factor_survey_vector_inv <- factor(survey_vector)
 levels(factor_survey_vector_inv) <- c("Male", "Female")
 factor_survey_vector_inv
 
-
-
-
-
-
-
-
-
-
-
 survey_vector
 
 #summarizing factors using the summary() function
