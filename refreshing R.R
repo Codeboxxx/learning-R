@@ -303,8 +303,15 @@ subset(planet_df, subset = rings)
 #or
 subset(planet_df, subset = rings==TRUE)
 
+#subset to select planets that have diameters less than 1
+planet_df
+subset(planet_df, subset = diameter < 1)
 
-
-
-
+#sorting a data frame
+#we can check the order elements of a data set by using the Order() function
+#we can also trick R to order the elements for us by using the order() function in a command statement
+a <- c(100, 10, 1000)
+order(a)
+#to trick R to sort out the elements for you 
+a[order(a)]
 
