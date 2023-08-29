@@ -64,7 +64,6 @@ roulette_winning_days <- roulette_vector[selection_vector_roulette]
 roulette_winning_days
 #useful to select a vector based on meeting certain conditions
 
-
 #matrix
 matrix(1:27, nrow = 9, byrow = FALSE)
 
@@ -111,7 +110,6 @@ box_office2 <- c(Phantom_Menace, Attack_of_the_Clones, Revenge_of_the_Sith)
 star_wars_matrix2 <- matrix(box_office2, nrow = 3, byrow = TRUE)
 star_wars_matrix2
 
-
 # Vectors region and titles, used for naming
 region <- c("US", "non-US")
 titles <- c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith")
@@ -131,7 +129,6 @@ all_wars_matric
 #summing the matrices
 total_revenue_vector <- colSums(all_wars_matric)
 total_revenue_vector
-
 
 #selection of matrix elements
 #selecting matrices are 2 dimensional and separated by a comma ","
@@ -315,3 +312,11 @@ order(a)
 #to trick R to sort out the elements for you 
 a[order(a)]
 
+#to arrange the planets diameter in decreasing order
+#and then show the arranged order in the data frame 
+positions <- order(planet_df$diameter, decreasing = TRUE)
+positions
+#now we subset the data frame with the new variable
+planet_df[positions,]
+
+#lists
