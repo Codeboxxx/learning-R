@@ -28,6 +28,8 @@ total_daily
 #total win/loss for each game
 total_poker <- sum(poker_vector)
 total_roulette <- sum(roulette_vector)
+total_poker
+total_roulette
 
 #total week win/loss 
 total_week <- sum(total_daily)
@@ -253,7 +255,7 @@ summary(factor_speed_vector)
 compare_them <- factor_speed_vector[2]>factor_speed_vector[5]
 compare_them
 
-#dDATA FRAMES
+#DATA FRAMES
 #head() and tail() helps to view top and bottom of the data
 #str() helps gives you an overview of the entire data 
 #creating data frames with the data.frame() function
@@ -320,3 +322,11 @@ positions
 planet_df[positions,]
 
 #lists
+# Vector with numerics from 1 up to 10
+my_vector <- 1:10 
+
+# Matrix with numerics from 1 up to 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+# First 10 elements of the built-in data frame 'mtcars'
+my_df <- mtcars[1:10,]
